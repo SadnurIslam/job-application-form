@@ -1,3 +1,27 @@
+<?php
+    $server = "localhost";
+    $username = "root";
+    $password = "";
+    $db_name = "bpsc";
+    $conn = "";
+    try{
+        $conn = mysqli_connect($server, $username, $password, $db_name);
+    }
+    catch(Exception $e){
+        echo "Connection Failed";
+    }
+    if(isset($_POST['next'])){
+        $name = $_POST['name'];
+        $fname = $_POST['fname'];
+        $mname = $_POST['mname'];
+        $day = $_POST['day'];
+        $month = $_POST['month'];
+        $year = $_POST['year'];
+        $blood_group = $_POST['blood_group'];
+    }
+    mysqli_close($conn);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
